@@ -9,8 +9,6 @@
 
 适用于使用 Cloudflare 作为 DNS 服务、自建服务器或家庭宽带双拨号（双 WAN）等场景。
 
----
-
 ## ✨ 特性
 
 - 同时更新 `A`（IPv4）和 `AAAA`（IPv6）记录
@@ -18,15 +16,11 @@
 - 支持公网动态 IP
 - 脚本结构简单，易于扩展
 
----
-
 ## ⚙️ 使用要求
 
 - 一个具有 DNS 编辑权限的 **Cloudflare API Token**
 - 在 Cloudflare 中预先创建好相应的 DNS 记录（1 个 AAAA，2 个 A）
 - 系统安装了 `curl`、`jq`、`host` 工具
-
----
 
 ## 🛠️ 配置方式
 
@@ -51,8 +45,6 @@ IPV4_INFO_SOURCE="http://myip.ipip.net"
 
 根据你网络环境，将脚本中 `ISP1`、`ISP2` 替换为实际的运营商标识（如 “电信”、“联通”）。
 
----
-
 ## 🚀 使用方法
 
 给脚本加执行权限并运行：
@@ -70,14 +62,10 @@ crontab -e
 */10 * * * * /path/to/ddns-update.sh
 ```
 
----
-
 ## 🔐 安全建议
 
 * **请勿公开 API Token、zone ID 等敏感信息**
 * 可将敏感信息写入 `.env` 文件并在脚本中引用，提升安全性
-
----
 
 ## 🧾 License
 
